@@ -1,5 +1,5 @@
-#ifndef GPPENEDITINGDIALOG_H
-#define GPPENEDITINGDIALOG_H
+#ifndef PLPPENEDITINGDIALOG_H
+#define PLPPENEDITINGDIALOG_H
 
 #include <QDialog>
 #include <QListWidget>
@@ -33,4 +33,4 @@ private:
     PlpPen *m_c_pen;
 };
 
-#endif // GPPENEDITINGDIALOG_H
+#endif // PLPPENEDITINGDIALOG_H

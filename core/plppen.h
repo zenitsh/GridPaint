@@ -1,5 +1,5 @@
-#ifndef GPPEN_H
-#define GPPEN_H
+#ifndef PLPPEN_H
+#define PLPPEN_H
 
 #include <QString>
 
@@ -20,4 +20,4 @@ private:
     QString m_name;
 };
 
-#endif // GPPEN_H
+#endif // PLPPEN_H

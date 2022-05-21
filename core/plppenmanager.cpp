@@ -3,12 +3,12 @@
 PlpPenManager::PlpPenManager()
 {
     PlpPen *pen1 = new PlpPen();
-    pen1->setSize(2.0f);
+    pen1->setSize(10.0f);
     pen1->setAlpha(1.0f);
     pen1->setName("Good Pen");
     addPen(pen1);
     PlpPen *pen2 = new PlpPen();
-    pen2->setSize(10.0f);
+    pen2->setSize(2.0f);
     pen2->setAlpha(0.5f);
     pen2->setName("Bad Pen");
     addPen(pen2);

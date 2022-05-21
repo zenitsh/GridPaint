@@ -28,29 +28,30 @@ set(PROJECT_SOURCES
         core/plpsettings.h core/plpsettings.cpp
         core/plppenmanager.h core/plppenmanager.cpp
         core/plppen.h core/plppen.cpp
+        core/plpdocument.h core/plpdocument.cpp
         ${TS_FILES}
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(GridPaint
+    qt_add_executable(PolarPaint
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
     )
 # Define target properties for Android with Qt 6 as:
-#    set_property(TARGET GridPaint APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
+#    set_property(TARGET PolarPaint APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
 #                 ${CMAKE_CURRENT_SOURCE_DIR}/android)
 # For more information, see https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
 
     qt_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 else()
     if(ANDROID)
-        add_library(GridPaint SHARED
+        add_library(PolarPaint SHARED
             ${PROJECT_SOURCES}
         )
 # Define properties for Android with Qt 5 after find_package() calls as:
 #    set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
     else()
-        add_executable(GridPaint
+        add_executable(PolarPaint
             ${PROJECT_SOURCES}
         )
     endif()
@@ -58,9 +59,9 @@ else()
     qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} ${TS_FILES})
 endif()
 
-target_link_libraries(GridPaint PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(PolarPaint PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 
-set_target_properties(GridPaint PROPERTIES
+set_target_properties(PolarPaint PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
@@ -69,5 +70,5 @@ set_target_properties(GridPaint PROPERTIES
 )
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(GridPaint)
+    qt_finalize_executable(PolarPaint)
 endif()

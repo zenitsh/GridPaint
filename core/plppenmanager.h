@@ -1,5 +1,5 @@
-#ifndef GPPENMANAGER_H
-#define GPPENMANAGER_H
+#ifndef PLPPENMANAGER_H
+#define PLPPENMANAGER_H
 
 #include <QList>
 #include "plppen.h"
@@ -16,4 +16,4 @@ private:
     QList<PlpPen*> m_list;
 };
 
-#endif // GPPENMANAGER_H
+#endif // PLPPENMANAGER_H

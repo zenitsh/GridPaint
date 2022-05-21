@@ -6,6 +6,7 @@
 #include <plppenmanager.h>
 #include <QLabel>
 #include <QKeyEvent>
+#include "plpsettings.h"
 #include "ui/plpcanvas.h"
 #include "dialog/plppeneditingdialog.h"
 
@@ -23,12 +24,16 @@ public:
 
 private slots:
     void on_action_Pen_triggered();
+
+    void on_action_Save_triggered();
+
     void keyPressEvent(QKeyEvent *event);
 
 private:
     Ui::MainWindow *ui;
     QHBoxLayout *layout;
     QLabel *status;
+    PlpSettings *settings;
     PlpCanvas *canvas;
     PlpPenManager *pen_manager;
 };
