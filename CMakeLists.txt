@@ -29,6 +29,10 @@ set(PROJECT_SOURCES
         core/plppenmanager.h core/plppenmanager.cpp
         core/plppen.h core/plppen.cpp
         core/plpdocument.h core/plpdocument.cpp
+        ui/plpcolorform.h ui/plpcolorform.cpp ui/plpcolorform.ui
+        ui/plplayerform.h ui/plplayerform.cpp ui/plplayerform.ui
+        ui/utils/plplayeritem.h ui/utils/plplayeritem.cpp
+        core/plplayer.h core/plplayer.cpp
         ${TS_FILES}
 )
 

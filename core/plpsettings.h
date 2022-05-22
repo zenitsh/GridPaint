@@ -16,7 +16,10 @@ public:
     PlpPen *pen;
     QTransform transform;
     QPoint rotation_center;
+    QColor pen_color_1;
     int current_state;
+    bool mouse_input;
+    bool erazing;
 
     PlpDocument *document;
 };

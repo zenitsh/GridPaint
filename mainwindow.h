@@ -3,11 +3,15 @@
 
 #include <QMainWindow>
 #include <QHBoxLayout>
+#include <QVBoxLayout>
 #include <plppenmanager.h>
 #include <QLabel>
 #include <QKeyEvent>
+#include <QDockWidget>
 #include "plpsettings.h"
 #include "ui/plpcanvas.h"
+#include "plpcolorform.h"
+#include "plplayerform.h"
 #include "dialog/plppeneditingdialog.h"
 
 QT_BEGIN_NAMESPACE
@@ -29,6 +33,10 @@ private slots:
 
     void keyPressEvent(QKeyEvent *event);
 
+    void on_action_Color_triggered();
+
+    void on_action_Layer_triggered();
+
 private:
     Ui::MainWindow *ui;
     QHBoxLayout *layout;
@@ -36,5 +44,9 @@ private:
     PlpSettings *settings;
     PlpCanvas *canvas;
     PlpPenManager *pen_manager;
+    QDockWidget *dock_color_form;
+    PlpColorForm *color_form;
+    QDockWidget *dock_layer_form;
+    PlpLayerForm *layer_form;
 };
 #endif // MAINWINDOW_H

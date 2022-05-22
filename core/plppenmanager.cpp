@@ -3,7 +3,7 @@
 PlpPenManager::PlpPenManager()
 {
     PlpPen *pen1 = new PlpPen();
-    pen1->setSize(10.0f);
+    pen1->setSize(32.0f);
     pen1->setAlpha(1.0f);
     pen1->setName("Good Pen");
     addPen(pen1);

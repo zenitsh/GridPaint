@@ -20,7 +20,7 @@
      <x>0</x>
      <y>0</y>
      <width>1024</width>
-     <height>33</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_F">
@@ -52,6 +52,8 @@
     <property name="title">
      <string>窗口(&amp;W)</string>
     </property>
+    <addaction name="action_Color"/>
+    <addaction name="action_Layer"/>
    </widget>
    <widget class="QMenu" name="menu_H">
     <property name="title">
@@ -87,6 +89,25 @@
   <action name="action_Pen">
    <property name="text">
     <string>笔刷...(&amp;P)</string>
+   </property>
+  </action>
+  <action name="action_Color">
+   <property name="text">
+    <string>颜色(&amp;C)</string>
+   </property>
+   <property name="shortcut">
+    <string>C</string>
+   </property>
+  </action>
+  <action name="action_Layer">
+   <property name="text">
+    <string>图层</string>
+   </property>
+   <property name="toolTip">
+    <string>图层</string>
+   </property>
+   <property name="shortcut">
+    <string>L</string>
    </property>
   </action>
  </widget>

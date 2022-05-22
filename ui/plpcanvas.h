@@ -15,11 +15,13 @@ class PlpCanvas : public QWidget
     Q_OBJECT
 public:
     explicit PlpCanvas(QWidget *parent = nullptr, PlpSettings *settings=nullptr);
+    void draw(int x,int y,float pressure = 1.0f);
     QImage *img;
 
 signals:
 
 public slots:
+    void repaintTimer();
     void paintEvent(QPaintEvent *event);
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
